@@ -11,6 +11,9 @@ import { RxStoreComponent } from './06_rx-store/rx-store.component';
 import { StoreWithSubscribeComponent } from './06_store-with-subscribe/store-with-subscribe.component';
 import { MessagesReducerComponent } from './07_messages-reducer/messages-reducer.component';
 import { ActionCreatorsComponent } from './08_action-creators/action-creators.component';
+import { RealReduxComponent } from './09_real-redux/real-redux.component';
+import { ReduxCounterComponent } from './10_redux-counter/redux-counter.component';
+import { appStoreProviders } from './10_redux-counter/app.store';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,14 @@ import { ActionCreatorsComponent } from './08_action-creators/action-creators.co
     // RxStoreComponent,
     StoreWithSubscribeComponent,
     MessagesReducerComponent,
-    ActionCreatorsComponent
+    ActionCreatorsComponent,
+    RealReduxComponent,
+    ReduxCounterComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [appStoreProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
